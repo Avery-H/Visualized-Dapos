@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Charts</title>
+	<style>
+	body{
+		height: 900px;
+		width: 900px;
+	}
+	/*canvas{ 
+		border: 1px solid black; 
+	}*/
+	
+	#time{
+		position: absolute;
+    	top: 160px;
+	    left: 10px;
+    }
+    #delegates{
+    	position: absolute;
+    	top: 400px; /* blaze it :D*/
+	    left: 300px;
+    }
+    #d1{
+    	position: absolute;
+    	left:100px;
+    	top:350px;
+    	transform: rotate(-15deg);
+    }
+    #d2{
+    	position: absolute;
+    	left:200px;
+    	top:350px;
+    	transform: rotate(-15deg);
+    }
+    #d3{
+    	position: absolute;
+    	left:300px;
+    	top:350px;
+    	transform: rotate(-15deg);
+    }
+    #d4{
+    	position: absolute;
+    	left:400px;
+    	top:350px;
+    	transform: rotate(-15deg);
+    }
+    #d5{
+    	position: absolute;
+    	left:500px;
+    	top:350px;
+    	transform: rotate(-15deg);
+    }
+    #d6{
+    	position: absolute;
+    	left:600px;
+    	top:350px;
+    	transform: rotate(-15deg);
+    }
+	</style>
+</head>
+<body onload="draw();">
+	<canvas id="foo"></canvas>
+	<div id="time">Time <br> (S)</div>
+	<div id="delegates">Delegates</div>
+	<div id="d1">D1</div>
+	<div id="d2">D2</div>
+	<div id="d3">D3</div>
+	<div id="d4">D4</div>
+	<div id="d5">D5</div>
+	<div id="d6">D6</div>
+
+
+<script type="text/javascript">
+	var canvas = document.getElementById('foo');
+	if (canvas.getContext) {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight;
+
+  var ctx = canvas.getContext('2d');
+  ctx.fillRect(100, 25, 2, 300);
+  ctx.fillRect(200, 25, 2, 300);
+  ctx.fillRect(300, 25, 2, 300);
+  ctx.fillRect(400, 25, 2, 300);
+  ctx.fillRect(500, 25, 2, 300);
+  ctx.fillRect(600, 25, 2, 300);
+
+  function Delegate(){
+    
+  }
+
+
+  function Block(x,y,color){
+  	this.x = x;
+  	this.y = y;
+  	this.color = color;
+  	this.DOwner = 3;
+
+  		this.draw = function(){
+  			ctx.beginPath();
+  			ctx.arc(x, y, 12,0, Math.PI * 2, false);
+  			ctx.fillStyle = color;
+  			ctx.fill();
+
+  		}
+  		this.broadcast = function(this.DOwner){
+  			
+  		}
+  }
+
+
+  //var block1 = new Block(300,320,"blue");
+  //block1.draw();
+  
+  // function animate(){
+
+  // }
+} else {
+  
+}
+</script>
+</body>
+</html>
